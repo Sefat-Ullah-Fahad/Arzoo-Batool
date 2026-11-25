@@ -12,22 +12,11 @@ import { MortgageCalculator } from '../components/MortgageCalculator';
 import { ClosingCta } from '../components/Sections';
 import { opts, Select } from '../components/Select';
 
-// const SLIDES = [
-//   { src: IMAGES.penthouseSkyline, caption: 'River North' },
-//   { src: IMAGES.brownstoneStreet, caption: 'Lincoln Park' },
-//   { src: IMAGES.chicagoRiver, caption: 'Chicago River' },
-//   { src: IMAGES.goldCoastSalon, caption: 'Gold Coast' },
-// ];
-// const SLIDE_MS = 6500;
-
-
-
 const SLIDES = [
-  { src: IMAGES.arzooChicagoPenthouse, caption: 'Chicago Penthouse' },
-  { src: IMAGES.arzooChicagoResidence, caption: 'Lincoln Park' },
-  { src: IMAGES.arzooGardenLifestyle, caption: 'Garden Lifestyle' },
-  { src: IMAGES.arzooLuxuryInterior, caption: 'Luxury Interior' },
-  // { src: IMAGES.arzooModernExterior, caption: 'Chicago River' },
+  { src: IMAGES.penthouseSkyline, caption: 'Chicago Penthouse' },
+  { src: IMAGES.livingArched, caption: 'Chicago Residence' },
+  { src: IMAGES.goldCoastSalon, caption: 'Gold Coast Living' },
+  { src: IMAGES.chicagoAerial, caption: 'Chicago Skyline' },
 ];
 
 const SLIDE_MS = 6500;
@@ -57,7 +46,7 @@ function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-night text-white">
+    <section className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden bg-night text-white">
       {SITE.heroVideo ? (
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -89,7 +78,15 @@ function Hero() {
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50" />
 
-      <div className="wrap relative pb-8 pt-32 sm:pb-12">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-10 mx-auto hidden h-full max-w-[1320px] xl:block">
+        <img
+          src={IMAGES.arzooNaqviHeroPortrait}
+          alt=""
+          className="absolute bottom-0 right-12 h-auto w-[min(40vw,520px)] max-h-[96svh] object-contain object-bottom"
+        />
+      </div>
+
+      <div className="wrap relative z-20 pb-8 pt-32 sm:pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,6 +103,14 @@ function Hero() {
             someone who picks up the phone.
           </p>
         </motion.div>
+
+        <div aria-hidden="true" className="relative z-10 mt-2 flex h-40 justify-end overflow-hidden sm:h-48 xl:hidden">
+          <img
+            src={IMAGES.arzooNaqviHeroPortrait}
+            alt=""
+            className="h-56 w-auto max-w-[45vw] object-contain object-bottom sm:h-64"
+          />
+        </div>
 
         <motion.form
           onSubmit={search}

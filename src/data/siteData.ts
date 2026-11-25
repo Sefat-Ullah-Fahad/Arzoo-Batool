@@ -50,6 +50,7 @@ export const IMAGES = {
   // People
   coupleKitchen: img("couple-kitchen"),
   portrait: img("portrait"), // TODO: replace with Arzoo's real headshot
+  arzooNaqviHeroPortrait: "/images/arzoo-naqvi-hero-portrait.png",
   ArzooNaqviAboutMe: img("arzoo-naqvi-about-me"), // TODO: replace with Arzoo's real headshot
   ArzooNaqviHome: img("arzoo-naqvi-home-hero"), // TODO: replace with Arzoo's real headshot
 } as const;
