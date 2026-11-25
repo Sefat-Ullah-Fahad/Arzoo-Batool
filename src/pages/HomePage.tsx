@@ -117,7 +117,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-20 mt-10 w-full max-w-none rounded-3xl bg-white/95 p-2 text-ink shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur-xl sm:rounded-full"
+          className="relative z-20 mt-10 w-full max-w-none rounded-3xl bg-white/95 p-2 text-ink shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur-xl sm:rounded-full xl:w-[55%]"
           aria-label="Search homes"
         >
           <div className="grid grid-cols-2 gap-1 sm:grid-cols-[1.5fr_1fr_1fr_auto] sm:items-center sm:gap-0">
